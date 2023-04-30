@@ -50,8 +50,13 @@ body {
 }
 
 #canvas {
-    flex: 0 1 50vw;
+    flex: 0 1 45vw;
 }
 
 /* Menu container: design the layout for the logo and menu options */
+#menu {
+    display: flex;
+}
+
+
 
