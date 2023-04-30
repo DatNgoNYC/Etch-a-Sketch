@@ -1,0 +1,57 @@
+/* CSS Selector Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* We are temporarily creating a 1 pixel border to have a view of the html layout */
+div {
+    border-width: 1px;
+    border-style: solid;
+}
+
+/* --- Main CSS --- */
+
+/* Three main layout containers: top, content, bottom */
+/* The top and bottom container will always occup 10% of the viewport height each. The middle container will have the other 80% */
+body {
+    display: flex;
+    flex-direction:column;
+}
+
+.top.container {
+    flex: 0 1 13vh;
+}
+
+.middle.container {
+    flex: 1 1 auto;
+}
+
+.bottom.container {
+    flex: 0 1 13vh;
+}
+
+/* Middle container: design the container layout */
+/* Menu and canvas divs should occupy 70% of the viewport width plus the gap between them */
+.middle.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3vw;
+}
+
+#menu {
+    flex: 0 1 20vw;
+}
+
+#canvas {
+    flex: 0 1 50vw;
+}
+
+/* Menu container: design the layout for the logo and menu options */
+

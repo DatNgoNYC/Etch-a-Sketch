@@ -4,19 +4,28 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Etch-a-Sketch</title>
-        <link rel="stylesheet" href="./index.css">
-        <script src="./index.js" defer></script>
+		<link rel="stylesheet" href="./index.css" />
+		<script src="./index.js" defer></script>
 	</head>
 	<body>
-		<div class="top-container"></div>
+		<div class="top container">hello</div>
 
-		<div class="middle-container">
-			<div class="content">
-				<div class="menu logo"></div>
-				<div class="canvas"></div>
+		<div class="middle container">
+			<div id="menu">
+				<div id="logo"></div>
+				<div id="controls">
+					<!-- <button id="clear"></button>
+					<div>
+						<input type="range" id="number-of-cells" name="board-size" min="10" max="100" />
+						<label for="board-size">Board Size</label>
+					</div> -->
+				</div>
+			</div>
+			<div id="canvas">
+				<!-- There should be the divs representing the pixels/cells in here. Generate using javascript. -->
 			</div>
 		</div>
 
-		<div class="bottom-container">made by dat ngo</div>
+		<div class="bottom container">made by dat ngo</div>
 	</body>
 </html>
