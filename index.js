@@ -63,4 +63,20 @@ const clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', function() {
 	drawCanvas(canvasDimensions);
 });
-// Add an event listener for when the button is clicked, will call clear canvas on event action. Clear canvas won't delete the div but change it's color to white/
+
+
+
+
+
+
+// Stars Position
+let topp=document.getElementById("top")
+function setStars(numS){
+	for (let i=0; i<numS; i++){
+		let stars=document.createElement("div")
+		stars.setAttribute("class","stars")
+		stars.style.left=100*Math.random()+"%"
+		stars.style.top=55*Math.random()+"%"
+		topp.appendChild(stars)
+	}
+}
