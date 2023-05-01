@@ -1,6 +1,6 @@
 /*  --- Initial State --- */
 /*  --- DESCRIPTION: the initial state of etch-a-sketch is a 10x10 canvas */
-let canvasDimensions = 10;
+let canvasDimensions = 50;
 drawCanvas(canvasDimensions);
 
 /*  --- Logic for the input form --- */

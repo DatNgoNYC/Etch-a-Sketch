@@ -1,110 +1,143 @@
-/* CSS Selector Reset */
+/* --- CSS Selector Reset --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
+	min-height: 100vh;
 }
 
-/* We are temporarily creating a 1 pixel border to have a view of the html layout */
 div {
-    border-width: 1px;
-    border-style: solid;
+	/* We are temporarily creating a 1 pixel border to have a view of the html layout */
+	border-width: 1px;
+	border-style: solid;
+}
+
+@font-face {
+	font-family: "streamster";
+	src: url("./Fonts/Streamster.ttf");
 }
 
 /* --- Main CSS --- */
+/* Background Image */
+body {
+	background: url("./images/wallpaperflare.com_wallpaper.jpg") center/cover;
+}
 
 /* Three main layout containers: top, content, bottom */
 /* The top and bottom container will always occup 10% of the viewport height each. The middle container will have the other 80% */
 body {
-    display: flex;
-    flex-direction:column;
+	display: flex;
+	flex-direction: column;
 }
 
 .top.container {
-    flex: 0 1 13vh;
+	flex: 0 1 13vh;
 }
 
 .middle.container {
-    flex: 1 1 auto;
+	flex: 1 1 auto;
 }
 
 .bottom.container {
-    flex: 0 1 13vh;
+	flex: 0 1 13vh;
 }
 
 /* Middle container: design the container layout */
 /* Menu and canvas divs should occupy 70% of the viewport width plus the gap between them */
 .middle.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 3vw;
 }
 
 #menu {
-    flex: 0 1 20vw;
+	flex: 0 1 20vw;
 }
 
 #canvas {
-    flex: 0 1 45vw;
+	flex: 0 1 50vw;
 }
 
-/* Menu container: design the layout for the logo and menu options */
+/* MENU CONTAINER: design the the logo and menu options */
 #menu {
-    display: flex;
-    flex-direction: column;
-    gap: 4%;
+	display: flex;
+	flex-direction: column;
+	gap: 4%;
 }
 
-#logo {
-    flex: 0 1 35%;
+#logo p{
+	flex: 0 1 35%;
+	font-family: "streamster";
+	font-size: 6vh;
+	text-align: center;
+	/*  */
+    color: #fff;
+	text-shadow: 0 0 8px #fff, 0 0 24px #fff, 0 0 32px #f80022, 0 0 40px #f80022;
+    inset: 0;
+	transform: rotate(-8deg);
+}
+
+#neon {
+	width: 50vw;
+	height: 18vw;
+	max-height: 60vh;
+	color: #fff;
+	text-align: center;
+	font-family: streamster;
+	font-size: 10vw;
+	text-shadow: 0 0 8px #fff, 0 0 24px #fff, 0 0 32px #f80022, 0 0 40px #f80022;
+	position: absolute;
+	inset: 0;
+	transform: rotate(-8deg);
+	z-index: 100;
 }
 
 #clear {
-    flex: 0 1 10%;
+	flex: 0 1 10%;
 }
 
 #canvas-size-form {
-    flex: 0 1 10%;
+	flex: 0 1 10%;
 }
 
 /* Canvas-size input: Design the layout for the form itself */
 #canvas-size-form {
-    display: flex;
+	display: flex;
 }
 
 #canvas-size-form input {
-    flex: 2;
-} 
+	flex: 2;
+}
 #canvas-size-form button {
-    flex: 2;
+	flex: 2;
 }
 
 /* Canvas: Design the canvas */
 #canvas {
-    display: flex;
+	display: flex;
 }
 
 #inner-canvas {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }
 
 .canvas-row {
-    display: flex;
-    flex: 1;
+	display: flex;
+	flex: 1;
 }
 
 .canvas-cell {
-    flex: 1;
+	flex: 1;
 }
 
 /* Paint Effect: color in the canvas when button is hovered over */
-.coloredIn { /* apply this class when cell is hovered over */
-    background-color: black;
+.coloredIn {
+	/* apply this class when cell is hovered over */
+	background-color: black;
 }
