@@ -1,6 +1,7 @@
 /*  --- Initial State --- */
 /*  --- DESCRIPTION: the initial state of etch-a-sketch is a 10x10 canvas */
-drawCanvas(10);
+let canvasDimensions = 10;
+drawCanvas(canvasDimensions);
 
 /*  --- Logic for the input form --- */
 /*  --- DESCRIPTION: THe input form (input and button) will change the canvas dimesions */
@@ -15,6 +16,7 @@ function changeCanvasSize() {
 		// don't do anything if the input value is empty
 		return;
 	} else {
+		canvasDimensions = parseInt(inputValue);
 		drawCanvas(parseInt(inputValue));
 	}
 }
@@ -57,4 +59,8 @@ function coloredIn(event) {
 /*  ---- Clear button logic --- */
 /*  ---- DESCRIPTION: Clear button will return the canvas to a blank state */
 // Reference to clear button
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', function() {
+	drawCanvas(canvasDimensions);
+});
 // Add an event listener for when the button is clicked, will call clear canvas on event action. Clear canvas won't delete the div but change it's color to white/
