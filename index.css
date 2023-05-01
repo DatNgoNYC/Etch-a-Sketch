@@ -56,7 +56,40 @@ body {
 /* Menu container: design the layout for the logo and menu options */
 #menu {
     display: flex;
+    flex-direction: column;
+    gap: 4%;
 }
 
+#logo {
+    flex: 0 1 35%;
+}
 
+#clear {
+    flex: 0 1 10%;
+}
 
+#canvas-size-form {
+    flex: 0 1 10%;
+}
+
+/* Canvas-size input: Design the layout for the form itself */
+#canvas-size-form {
+    display: flex;
+}
+
+#canvas-size-form input {
+    flex: 2;
+} 
+#canvas-size-form button {
+    flex: 2;
+}
+
+/* Canvas: Design the canvas */
+#inner-canvas {
+    display: flex;
+    flex-direction: column;
+}
+
+#canvas-row {
+    display: flex;
+}
