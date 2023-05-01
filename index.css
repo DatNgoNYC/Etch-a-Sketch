@@ -103,3 +103,8 @@ body {
 .canvas-cell {
     flex: 1;
 }
+
+/* Paint Effect: color in the canvas when button is hovered over */
+.coloredIn { /* apply this class when cell is hovered over */
+    background-color: black;
+}
