@@ -85,11 +85,21 @@ body {
 }
 
 /* Canvas: Design the canvas */
+#canvas {
+    display: flex;
+}
+
 #inner-canvas {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
-#canvas-row {
+.canvas-row {
     display: flex;
+    flex: 1;
+}
+
+.canvas-cell {
+    flex: 1;
 }
