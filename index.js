@@ -65,18 +65,3 @@ clearButton.addEventListener('click', function() {
 });
 
 
-
-
-
-
-// Stars Position
-let topp=document.getElementById("top")
-function setStars(numS){
-	for (let i=0; i<numS; i++){
-		let stars=document.createElement("div")
-		stars.setAttribute("class","stars")
-		stars.style.left=100*Math.random()+"%"
-		stars.style.top=55*Math.random()+"%"
-		topp.appendChild(stars)
-	}
-}

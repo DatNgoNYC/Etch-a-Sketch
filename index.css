@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yesteryear&display=swap");
+@font-face {
+	font-family: "streamster";
+	src: url("./Fonts/Streamster.ttf");
+}
+
 /* --- CSS Selector Reset --- */
 * {
 	margin: 0;
@@ -9,15 +16,10 @@ body {
 	min-height: 100vh;
 }
 
-div {
+div.canvas-cell {
 	/* We are temporarily creating a 1 pixel border to have a view of the html layout */
 	border-width: 1px;
 	border-style: solid;
-}
-
-@font-face {
-	font-family: "streamster";
-	src: url("./Fonts/Streamster.ttf");
 }
 
 /* --- Main CSS --- */
@@ -26,7 +28,7 @@ body {
 	background: url("./images/wallpaperflare.com_wallpaper.jpg") center/cover;
 }
 
-/* Three main layout containers: top, content, bottom */
+/* THREE MAIN LAYOUT CONTAINERS: top, content, bottom */
 /* The top and bottom container will always occup 10% of the viewport height each. The middle container will have the other 80% */
 body {
 	display: flex;
@@ -45,7 +47,7 @@ body {
 	flex: 0 1 13vh;
 }
 
-/* Middle container: design the container layout */
+/* MIDDLE CONTAINER: design the container layout */
 /* Menu and canvas divs should occupy 70% of the viewport width plus the gap between them */
 .middle.container {
 	display: flex;
@@ -69,49 +71,66 @@ body {
 	gap: 4%;
 }
 
-#logo p{
+#logo p {
 	flex: 0 1 35%;
 	font-family: "streamster";
-	font-size: 6vh;
+	font-size: 8vh;
 	text-align: center;
 	/*  */
-    color: #fff;
-	text-shadow: 0 0 8px #fff, 0 0 24px #fff, 0 0 32px #f80022, 0 0 40px #f80022;
-    inset: 0;
-	transform: rotate(-8deg);
-}
-
-#neon {
-	width: 50vw;
-	height: 18vw;
-	max-height: 60vh;
 	color: #fff;
-	text-align: center;
-	font-family: streamster;
-	font-size: 10vw;
 	text-shadow: 0 0 8px #fff, 0 0 24px #fff, 0 0 32px #f80022, 0 0 40px #f80022;
-	position: absolute;
 	inset: 0;
 	transform: rotate(-8deg);
-	z-index: 100;
 }
 
 #clear {
 	flex: 0 1 10%;
+	margin-top: 3vh;
+}
+
+.neon-box {
+	background-color: black;
+	/* animation: pulsate 1.5s infinite alternate; */
+	border: 0.2rem solid #fff;
+	border-radius: 5px;
+	padding: 10px 0 0 0; /*0.4em;*/
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe,
+		inset 0 0 1.3rem #bc13fe;
+}
+
+.neon-text {
+	font-family: "Yesteryear";
+	color: white;
+	font-size: 5vh;
+	color: #fff;
+	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #bc13fe, 0 0 82px #bc13fe,
+		0 0 92px #bc13fe, 0 0 102px #bc13fe, 0 0 151px #bc13fe;
 }
 
 #canvas-size-form {
 	flex: 0 1 10%;
 }
 
-/* Canvas-size input: Design the layout for the form itself */
+/* CANVAS-SIZE-FORM: Design the layout for the form itself */
 #canvas-size-form {
 	display: flex;
+	width: 0;
+	min-width: 100%;
 }
 
 #canvas-size-form input {
 	flex: 2;
+	background-color: white;
+	min-width: 0;
 }
+
+input[type="text"] {
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+	color: black;
+	font-size: 30px;
+}
+
 #canvas-size-form button {
 	flex: 2;
 }
@@ -140,118 +159,4 @@ body {
 .coloredIn {
 	/* apply this class when cell is hovered over */
 	background-color: black;
-}
-
-
-
-/*  */
-@keyframes gridz{
-    100%{
-      transform: perspective(60vh) rotateX(75deg) translateY(6.25vh);
-    }
-}
-#grid div{
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-    filter: blur(1px);
-}
-
-.stars{
-    width: 1px;
-    height: 1px;
-    background: #fff;
-    position: absolute;
-}
-
-@keyframes sunset{
-    0%,5%{
-        background: #45125e;
-        opacity: 0;
-    }
-    10%{
-        opacity: 1;
-    }
-    70%{
-        background: #A22561;
-    }
-    100%{
-        height: 4vh;
-        background: #E03263;
-        transform: translateY(40vh);
-    }
-}
-#mountain::before{
-    content: "";
-    width: 100vw;
-    height: 4px;
-    background: #fff;
-    box-shadow:
-    0 0 8px #fff,
-    0 0 16px #fff,
-    0 0 24px #af62ff,
-    0 0 32px #af62ff;
-    position: absolute;
-    filter: blur(1px);
-    z-index: 20;
-}
-#mountain div{
-    background: linear-gradient(
-        #090910 40%,
-        #450547 100%
-    );
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    position: absolute;
-    z-index: 10;
-}
-#mountain div:nth-child(1){
-    width: 24vw;
-    height: 6vw;
-    max-height: 6vh;
-    inset: auto auto 45% -5%;
-}
-#mountain div:nth-child(2){
-    width: 24vw;
-    height: 8vw;
-    max-height: 8vh;
-    inset: auto auto 45% 5%;
-}
-#mountain div:nth-child(3){
-    width: 30vw;
-    height: 10vw;
-    max-height: 10vh;
-    inset: auto auto 45% 15%;
-}
-#mountain div:nth-child(4){
-    width: 30vw;
-    height: 18vw;
-    max-height: 18vh;
-    inset: auto auto 45% 30%;
-}
-#mountain div:nth-child(5){
-    width: 30vw;
-    height: 26vw;
-    max-height: 26vh;
-    inset: auto 30% 45% auto;
-}
-#mountain div:nth-child(6){
-    width: 30vw;
-    height: 10vw;
-    max-height: 10vh;
-    inset: auto 15% 45% auto;
-    z-index: 9;
-}
-#mountain div:nth-child(7){
-    width: 24vw;
-    height: 8vw;
-    max-height: 8vh;
-    inset: auto 5% 45% auto;
-    z-index: 8;
-}
-#mountain div:nth-child(8){
-    width: 24vw;
-    height: 6vw;
-    max-height: 6vh;
-    inset: auto -5% 45% auto;
-    z-index: 7;
 }
