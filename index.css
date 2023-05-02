@@ -16,16 +16,10 @@ body {
 	min-height: 100vh;
 }
 
-div.canvas-cell {
-	/* We are temporarily creating a 1 pixel border to have a view of the html layout */
-	border-width: 1px;
-	border-style: solid;
-}
-
 /* --- Main CSS --- */
 /* Background Image */
 body {
-	background: url("./images/wallpaperflare.com_wallpaper.jpg") center/cover;
+	background: url("./images/wallpaper_2.jpg") center/cover;
 }
 
 /* THREE MAIN LAYOUT CONTAINERS: top, content, bottom */
@@ -81,6 +75,7 @@ body {
 	text-shadow: 0 0 8px #fff, 0 0 24px #fff, 0 0 32px #f80022, 0 0 40px #f80022;
 	inset: 0;
 	transform: rotate(-8deg);
+    backdrop-filter: blur(1px);
 }
 
 #clear {
@@ -138,6 +133,14 @@ input[type="text"] {
 /* Canvas: Design the canvas */
 #canvas {
 	display: flex;
+	border-color: #f80022;
+	background-color: white;
+	border: 0.2rem solid #fff;
+	border-radius: 5px;
+	padding: 10px 0 0 0; /*0.4em;*/
+	box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #f80022, 0 0 0.8rem #f80022, 0 0 2.8rem #f80022,
+		inset 0 0 2.3rem #f80022;
+    padding-top: 0;
 }
 
 #inner-canvas {
